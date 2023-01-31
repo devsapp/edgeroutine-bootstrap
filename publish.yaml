@@ -1,6 +1,6 @@
 Type: Application
 Name: edgeroutine-bootstrap
-Version: 0.0.3
+Version: 0.0.4
 Provider:
   - 阿里云
 Description: 阿里云edgeroutine示例代码
@@ -8,15 +8,11 @@ HomePage: https://github.com/devsapp/edgeroutine-bootstrap
 Tags:
   - edgeroutine
   - 边缘应用程序样例
-  - 函数计算
 Category: 基础云服务
 Service:
   函数计算:
     Authorities:
       - AliyunFCFullAccess
-  边缘应用程序:
-    Authorities:
-      - AliyunFCFullAccess 
 Commands: # 指令，格式为指令：指令描述，例如：
   deploy: 部署Edgeroutine
   list: 查看Edgeroutine列表
