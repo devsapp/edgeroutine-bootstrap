@@ -1,0 +1,60 @@
+type Query {
+	"查询当前 API 的版本信息。"
+  versions: Versions!
+
+	"查询指定城市的实时天气数据。"
+  weatherOfCity(name: String!): Weather!
+}
+
+"""
+城市信息
+"""
+type City {
+  """
+  城市的唯一标识
+  """
+  id: ID!
+
+  """
+  城市的名称
+  """
+  name: String!
+}
+
+"""
+版本信息
+"""
+type Versions {
+  """
+  API 版本号。
+  """
+  api: String!
+
+  """
+  `graphql` NPM 版本号。
+  """
+  graphql: String!
+}
+
+"""
+天气数据
+"""
+type Weather {
+  "当前城市"
+  city: City!
+
+  "最后更新时间"
+  updateTime: String!
+
+  "天气状况代码"
+  code: String!
+
+  "本地化（中文）的天气状态"
+  localized: String!
+
+  "白天气温"
+  tempOfDay: Float!
+
+  "夜晚气温"
+  tempOfNight: Float!
+}

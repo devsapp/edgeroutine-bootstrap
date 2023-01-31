@@ -1,0 +1,39 @@
+{
+  "name": "@ali/edge-routine-typescript-template",
+  "version": "1.0.0",
+  "description": "A TypeScript template for EdgeRoutine.",
+  "repository": "git@gitlab.alibaba-inc.com:nue/edge-routine-typescript-template.git",
+  "author": "亨睿 <henry.lx@alibaba-inc.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npm.alibaba-inc.com"
+  },
+  "main": "edge.js",
+  "scripts": {
+    "build": "webpack --stats-error-details --config scripts/webpack.prod.config.js",
+    "publish": "npm run build && edgeroutine-cli build && echo \"Wait for 8 seconds...\" && sleep 8 && edgeroutine-cli publish",
+    "dev": "webpack serve --stats-error-details --config scripts/webpack.dev.config.js",
+    "start": "npm run dev"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "prettier",
+      "typescript"
+    ]
+  },
+  "devDependencies": {
+    "@ali/edge-routine-types": "^1.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-typescript": "^3.0.0",
+    "prettier": "^2.3.2",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.3.5",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {}
+}

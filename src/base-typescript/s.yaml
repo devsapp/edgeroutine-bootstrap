@@ -5,12 +5,11 @@ services:
   dcdn:
     component: edgeroutine  # 这里引入的是相对路径，正式配置替换成你自己的component名称即可 
     props:
-      erName: er-gateway
+      erName: base-typescript
       erDescription: 
-      code: './code/index.js'
+      code: './edge.js'
       envConf:
         staging: '50ms'
         production: '100ms'
       envs:
         - production
-

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "webworker","dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "esnext",
+    "types": []
+  },
+  "include": ["src",],
+  "exclude": ["node_modules"]
+}
