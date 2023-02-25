@@ -1,0 +1,15 @@
+edition: 1.0.0        
+name: edgeroutine-demo  #  项目名称
+access: default # 密钥别名
+services:
+  edgeroutine:
+    component: edgeroutine 
+    props:
+      erName: graphql-gateway  # 你的edgeroutine应用程序名
+      erDescription: 
+      code: './edge.js' #要上传的代码
+      envConf:
+        staging: '50ms'
+        production: '100ms'
+      envs:
+        - production  #指定上传环境 

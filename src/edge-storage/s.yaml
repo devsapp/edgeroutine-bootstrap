@@ -1,0 +1,15 @@
+edition: 1.0.0        #  命令行YAML规范版本，遵循语义化版本（Semantic Versioning）规范
+name: edgeroutine-bootstrap   #  项目名称
+access: default # 密钥别名
+services:
+  dcdn:
+    component: edgeroutine  # 这里引入的是相对路径，正式配置替换成你自己的component名称即可 
+    props:
+      erName: edge-storage
+      erDescription: 
+      code: './edge.js'
+      envConf:
+        staging: '50ms'
+        production: '100ms'
+      envs:
+        - production
