@@ -14,26 +14,26 @@
 
 ### 使用前置条件
 + 开通 DCDN及Edgeroutine服务
-+ 下载阿里云Serverless Devs开发者工具，并按照示例配置好您的秘钥信息（请妥善保管秘钥信息）
++ 下载阿里云[Serverless Devs](http://www.serverless-devs.com/)开发者工具，并按照示例配置好您的秘钥信息（请妥善保管秘钥信息）
 
 
 ### 快速开始
 
 #### 1.初始化指令
 ```
-s init edgerouine-bootstrap
+s init edgeroutine-bootstrap
 ```
 #### 2.选择示例代码进行开发
 比如开发 graphql-gateway
 ```bash
-cd <projectPath>/src/graphql-gateway && npm i
+cd <projectPath>/demos/graphql-gateway && npm i
 ```
 本地开发
 ```bash
 npm run dev
 ```
 #### 3.配置及部署
-修改s.yaml文件，项目信息，如ername，部署环境等，执行部署指令
+修改s.yaml文件，项目信息，如ername，部署环境,部署代码路径等，执行部署指令
 ```
 s deploy
 ```
