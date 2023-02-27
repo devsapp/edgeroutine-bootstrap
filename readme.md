@@ -46,12 +46,34 @@ s deploy
 + base-typescript  基础示例
 + graphql-gateway  graphql 网关示例, [详细](https://help.aliyun.com/document_detail/453640.html)
 + graphql-gateway-with-fc  graphql场景边缘Faas到中心Faas的联动
-+ edge-gpt 边缘流式传染 GPT场景
++ edge-gpt 边缘流式传染 智能问答场景
 + router-map 边缘网关路由方案
 + edge-storage 边缘存储方案（使用eventbridge实现异步缓存写入能力）
++ edge-tianmaojingling  边缘实现天猫精灵的自定义后端服务
+### 更多官网代码示例
 
-### 更多代码示例
-参考官网
+    [返回1个HTML页面](https://help.aliyun.com/document_detail/365604.html)
+
+    [返回1个JSON](https://help.aliyun.com/document_detail/365663.html)
+
+    [重定向至指定URL](https://help.aliyun.com/document_detail/365664.html)
+
+    [修改URL并重定向](https://help.aliyun.com/document_detail/365665.html)
+
+    [请求一个页面并返回](https://help.aliyun.com/document_detail/365666.html)
+
+    [A/B测试](https://help.aliyun.com/document_detail/365668.html)
+
+    [请求一个JS文件并返回](https://help.aliyun.com/document_detail/365667.html)
+
+    [修改header](https://help.aliyun.com/document_detail/365669.html)
+
+    [简单的身份校验](https://help.aliyun.com/document_detail/365670.html)
+
+    [请求特征识别](https://help.aliyun.com/document_detail/365671.html)
+
+    [更多示例代码](https://help.aliyun.com/document_detail/284528.html)
+
 
 ### 其他说明
 目前ER 不支持 ReadableStream , TextDecoder的实例化，所以本地联调这些能行的 ER环境不行，另外本地不支持 cache， EdgeKV所以也无法调试缓存功能，需要部署到线上使用
