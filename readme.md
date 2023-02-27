@@ -13,7 +13,7 @@
 + 支持本地一键部署，支持多环境配置，帮助您快速的进行线上代码落地
 
 ### 使用前置条件
-+ 开通 DCDN及Edgeroutine服务
++ 开通 [DCDN](https://www.aliyun.com/product/dcdn?spm=5176.serverlessdevs)及[Edgeroutine](https://help.aliyun.com/document_detail/263523.html)服务
 + 下载阿里云[Serverless Devs](http://www.serverless-devs.com/)开发者工具，并按照示例配置好您的秘钥信息（请妥善保管秘钥信息）
 
 
