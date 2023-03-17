@@ -62,11 +62,15 @@ async function handleRequest(request: Request) {
       refferPath = refferUrl.pathname;
     }
 
-    regValues.forEach((value) => {
-      if (pathname.match(value.reg) || refferPath.match(value.reg)) {
-        finalurl = route[value.route] + pathname.replace(value.reg, '/') + search
-      }
-    });
+    if (route[pathname] || route[refferPath]) { //
+      regValues.forEach((value) => {
+        if (pathname.match(value.reg) || refferPath.match(value.reg)) {
+          finalurl = route[value.route] + pathname.replace(value.reg, '/') + search
+        }
+      });
+    } else {
+      finalurl = route['/'] + pathname + search;
+    }
 
     const fetch_response: any = await fetch(finalurl, { headers: requestHeaders, method, body });
     const results = await gatherResponse(fetch_response)

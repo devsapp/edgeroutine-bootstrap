@@ -1,6 +1,6 @@
 Type: Application
 Name: edgeroutine-bootstrap
-Version: 0.0.6
+Version: 0.0.7
 Provider:
   - 阿里云
 Description: 阿里云edgeroutine示例代码

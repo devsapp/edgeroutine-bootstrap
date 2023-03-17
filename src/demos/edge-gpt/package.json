@@ -1,21 +1,18 @@
 {
-  "name": "@ali/edge-routine-typescript-template",
-  "version": "1.0.0",
-  "description": "A TypeScript template for EdgeRoutine.",
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.alibaba-inc.com:nue/edge-routine-typescript-template.git"
-  },
-  "author": "亨睿 <henry.lx@alibaba-inc.com>",
+  "name": "edge-gpt",
+  "version": "0.0.1",
+  "description": "可以用来完成流式转发",
+  "repository": "",
+  "author": "寒斜",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://registry.npm.alibaba-inc.com"
+    "registry": ""
   },
   "main": "edge.js",
   "scripts": {
-    "build": "webpack --stats-error-details --config scripts/webpack.prod.config.js",
-    "publish": "npm run build && edgeroutine-cli build && echo \"Wait for 8 seconds...\" && sleep 8 && edgeroutine-cli publish",
-    "dev": "webpack serve --stats-error-details --config scripts/webpack.dev.config.js",
+    "build": "webpack --config scripts/webpack.prod.config.js",
+    "publish": "npm run build && edgeroutine-cli build && echo \"Wait for 5 seconds...\" && sleep 5 && edgeroutine-cli publish",
+    "dev": "webpack serve --config scripts/webpack.dev.config.js",
     "start": "npm run dev"
   },
   "eslintConfig": {
@@ -26,21 +23,29 @@
     ]
   },
   "devDependencies": {
-    "@ali/edge-routine-types": "^1.0.1",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-typescript": "^3.0.0",
+    "html-loader": "^2.1.2",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "os-browserify": "^0.3.0",
     "prettier": "^2.3.2",
+    "stream-browserify": "^3.0.0",
     "ts-loader": "^9.2.5",
     "typescript": "^4.3.5",
+    "util": "^0.12.4",
     "webpack": "^5.50.0",
-    "webpack-cli": "^4.7.2",
+    "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^3.11.2",
+    "webpack-graphql-loader": "^1.0.2",
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/plugin-transform-async-to-generator": "^7.20.7",
-    "eventsource-parser": "^0.0.5"
+    "@apollo/server": "^4.3.1",
+    "graphql": "^15.3.0"
   }
 }

@@ -7,6 +7,6 @@ const baseConfig = require('./webpack.base.config');
 // Webpack configuration for production building.
 
 module.exports = merge(baseConfig, {
-  mode: 'development',
+  mode: 'production',
   devtool: 'source-map'
 });

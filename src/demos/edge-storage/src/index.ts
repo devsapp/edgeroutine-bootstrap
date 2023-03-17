@@ -74,7 +74,9 @@ function handleRequest(request: Request): Promise<Response> | void {
   if (path === '/storage') {
 
     return fetchFromCache('https://www.aliyun.com').then(content => {
-      return Promise.resolve(new Response(`storagecontent ${content}!`, { status: 200 }));
+      const res = new Response(`storagecontent ${content}!`, { status: 200 });
+      res.headers.append('Set-Cookie', 'uid=112; Path=/; HttpOnly');
+      return Promise.resolve(res);
     });
 
   }

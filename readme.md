@@ -2,7 +2,7 @@
 
 
 ### 特色
-+ 将Edgeroutine的开发完全工程化以及标准化，基于typescript和webpack，可以进行本地开发调试，利用npm生态（注意部分node模块可能无法使用）
++ 将[Edgeroutine](https://help.aliyun.com/document_detail/263523.html)的开发完全工程化以及标准化，基于typescript和webpack，可以进行本地开发调试，利用npm生态（注意部分node模块可能无法使用）
 + 丰富的模版案例，如
 边缘Gateway路由配置、
 边缘Graphql、
@@ -76,4 +76,6 @@ s deploy
 
 
 ### 其他说明
-目前ER 不支持 ReadableStream , TextDecoder的实例化，所以本地联调这些能行的 ER环境不行，另外本地不支持 cache， EdgeKV所以也无法调试缓存功能，需要部署到线上使用
++ 目前Edgeroutine公测中，需要先[申请开通](https://page.aliyun.com/form/act2017566026/index.htm?spm=a2c4g.11186623.0.0.62105b9aJ3g6zp)
++ 开通后需要创建[子域](https://help.aliyun.com/document_detail/263524.html?spm=5176.11220512.help.dexternal.3ed272f0wEIggL#title-s47-842-f54)
++ 目前ER 不支持 ReadableStream , TextDecoder的实例化，所以本地联调这些能行的 ER环境不行，另外本地不支持 cache， EdgeKV所以也无法调试缓存功能，需要部署到线上使用
